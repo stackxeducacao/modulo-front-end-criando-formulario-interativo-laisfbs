@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Formulário de Cadastro</title>
+</head>
+
+<body>
+    <div>
+        <h1 id="titulo">Cadastro</h1>
+        <p id="subtitulo"><strong>Insira suas informações abaixo:</strong></p>
+    </div>
+    <form>
+        <fieldset>
+            <div class="campo-dados">
+                <div class="campo">
+                    <label for="nome"><strong>Nome:</strong></label>
+                    <input type="text" name="nome" id="nome" required aria-required="true">
+                </div>
+                <div class="campo">
+                    <label for="sobrenome"><strong>Sobrenome:</strong></label>
+                    <input type="text" name="sobrenome" id="sobrenome" required aria-required="true">
+                </div>
+                <div class="campo">
+                    <label for="email"><strong>E-mail:</strong></label>
+                    <input type="email" name="email" id="email" required aria-required="true">
+                </div>
+                <div class="campo">
+                    <label for="tel"><strong>Telefone:</strong></label>
+                    <input type="tel" name="tel" id="tel" required aria-required="true">
+                </div>
+            </div>
+
+
+            <div class="campo">
+                <label><strong>Qual área de atuação preferida?</strong></label>
+                <label>
+                    <input type="radio" name="areaAtuacao" value="Frontend">Front-end
+                </label>
+                <label>
+                    <input type="radio" name="areaAtuacao" value="Backend">Back-end
+                </label>
+                <label>
+                    <input type="radio" name="areaAtuacao" value="Fullstack">Full Stack
+                </label>
+            </div>
+
+            <div class="campo">
+
+                <label><strong>Linguagens de Programação:</strong></label>
+                <table>
+                    <table>
+                        <tr>
+                            <td>
+                                <input type="checkbox" name="linguagens[]" id="HTML" value="HTML"> HTML
+                            </td>
+                            <td>
+                                <input type="checkbox" name="linguagens[]" id="Python" value="Python"> Python
+                            </td>
+                            <td>
+                                <input type="checkbox" name="linguagens[]" id="JavaScript" value="JavaScript">
+                                JavaScript
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="checkbox" name="linguagens[]" id="PHP" value="PHP"> PHP
+                            </td>
+                            <td>
+                                <input type="checkbox" name="linguagens[]" id="Java" value="Java"> Java
+                            </td>
+                            <td>
+                                <input type="checkbox" name="linguagens[]" id="Outro" value="Outro"> Outro
+                            </td>
+                        </tr>
+                    </table>
+            </div>
+
+            <div class="campo">
+                <label><strong>Qual seu nível de Experiência:</strong></label>
+                <select id="experiencia">
+                    <option selected disabled value="Selecione">Selecione</option>
+                    <option>Junior</option>
+                    <option>Pleno</option>
+                    <option>Senior</option>
+                </select>
+            </div>
+
+            <div class="campo">
+                <label><strong>Experiência com metodologias ágeis (Scrum, Kanban)?</strong></label>
+                <select id="metodologias">
+                    <option selected disabled value="Selecione">Selecione</option>
+                    <option>Sim</option>
+                    <option>Não</option>
+                </select>
+            </div>
+
+            <div class="campo">
+                <label for="curriculo"><strong>Insira seu currículo</strong></label>
+                <input type="file" id="curriculo" name="curriculo" required>
+            </div>
+
+        <button class="button" type="submit">Finalizar cadastro</button>
+    </fieldset>
+
+    </form>
+</body>
+
+</html>
